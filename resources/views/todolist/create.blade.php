@@ -9,6 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
+                    <p>The Start should be advance from this day and the the due date should be greater than the Starting date or it will return an error</p>
                     <form method="post" action="{{ route('todolist.store') }}" enctype="multipart/form-data">
                         @csrf
                         @if (session('success'))
