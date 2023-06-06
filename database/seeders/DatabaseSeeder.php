@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\gallery;
+use App\Models\Todolist;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,7 +14,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        $users = \App\Models\User::factory(10)->create();
+        foreach ($users as $user) {
+            gallery::factory()->create([
+                'user_id' => $user->id,
+            ]);
+            Todolist::factory()->create([
+                'user_id' => $user->id,
+            ]);
+        }
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

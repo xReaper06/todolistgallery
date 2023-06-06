@@ -46,4 +46,7 @@ class User extends Authenticatable implements MustVerifyEmail
     public function gallerys(){
         return $this->hasMany(gallery::class);
     }
+    public function Todolists(){
+        return $this->hasMany(Todolist::class);
+    }
 }

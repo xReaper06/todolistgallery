@@ -18,9 +18,9 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-black-darker bg-center bg-gray-100 dark:bg-black-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-black-darker bg-center bg-sky-900 dark:bg-sky-500 selection:bg-red-500 selection:text-white">
             @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                <div class="sm:fixed sm:top-5 sm:right-10 p-6 border-solid bg-sky-500 text-right z-10">
                     @auth
                         <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
                     @else
@@ -33,8 +33,8 @@
                 </div>
             @endif
 
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <h1 class="flex justify-center">Todo List Gallery App System</h1>
+            <div class="max-w-7xl sm:fixed sm:top-0 mx-auto p-6 lg:p-8">
+                <h1 class="flex justify-center text-lg">Todo List Gallery App System</h1>
                 <div class="flex justify-center">
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="500.000000pt" height="150" viewBox="0 0 500.000000 500.000000"

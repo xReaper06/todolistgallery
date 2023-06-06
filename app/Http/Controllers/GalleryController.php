@@ -81,7 +81,7 @@ class GalleryController extends Controller
         if(!$gallery){
             return redirect()->route('gallery.index')->with('error', 'Gallery not found');
         }
-        Storage::disk('public')->delete('images/' . $gallery->imagepath);
+        Storage::disk('public')->delete('storage/' . $gallery->imagepath);
         $gallery->delete();
         return redirect()->route('gallery.index')->with('success', 'Gallery deleted successfully');
 
